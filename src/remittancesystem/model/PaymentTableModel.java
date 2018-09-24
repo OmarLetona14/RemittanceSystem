@@ -80,7 +80,7 @@ public class PaymentTableModel extends AbstractTableModel {
        Payment instance = (Payment)aValue;
        Payment row = paymentList[rowIndex];
        if(0 == columnIndex) {
-           row.setIdPayment((Integer) instance.getIdBeneficiary());
+           row.setIdPayment((Integer) instance.getIdPayment());
        }
        else if(1 == columnIndex) {
            row.setCurrentDate((String) instance.getCurrentDate());

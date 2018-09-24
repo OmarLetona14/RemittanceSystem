@@ -97,7 +97,7 @@ public class RemitterTableModel extends AbstractTableModel {
            row.setNationality((String) instance.getNationality());
        }
        else if(4 == columnIndex) {
-           row.setAddress((String) instance.getNationality());
+           row.setAddress((String) instance.getAddress());
        }
        else if(5 == columnIndex) {
            row.setPhoneNumber((Integer) instance.getPhoneNumber());

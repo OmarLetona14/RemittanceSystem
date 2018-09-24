@@ -1,4 +1,4 @@
-/*
+ /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -151,7 +151,10 @@ public class OperationalUserController implements ActionListener {
         deleteOperationalUserButton.addActionListener((ActionEvent e1) -> {
             if(!(deleteRow==0)){
                             try{OperationalUserTableModel.operationalUserList[deleteRow] = null;
-            deleted = true;}catch(Exception ex){}
+            deleted = true;}catch(Exception ex){
+                JOptionPane.showMessageDialog(OperationalUserController.newUserFrame, "Error al eliminar el usuario", "Error",
+                    JOptionPane.ERROR_MESSAGE);
+            }
             if(deleted){JOptionPane.showMessageDialog(OperationalUserController.newUserFrame, "Usuario eliminado correctamente", "Error",
                     JOptionPane.INFORMATION_MESSAGE);
             OperationalUserController.userWindow.dispose();

@@ -51,19 +51,21 @@ public class OperationalUserTableModel extends AbstractTableModel {
     }
     @Override
     public Object getValueAt(int rowIndex, int columnIndex)
-    {
+    {   
         OperationalUser row = operationalUserList[rowIndex];
-        if(0 == columnIndex) {
-            return row.getIdOperationalUser();
-        }
-        else if(1 == columnIndex) {
-            return row.getNickname();
-        }
-        else if(2 == columnIndex) {
-            return row.getPassword();
-        }
-        else if(3 == columnIndex) {
-            return row.getRole();
+        if(!(row==null)){
+            if(0 == columnIndex) {
+                return row.getIdOperationalUser();
+            }
+            else if(1 == columnIndex) {
+                return row.getNickname();
+            }
+            else if(2 == columnIndex) {
+                return row.getPassword();
+            }
+            else if(3 == columnIndex) {
+                return row.getRole();
+            }
         }
         return null;
     }
